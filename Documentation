@@ -1,0 +1,33 @@
+                             
+/*****************************************************************************************
+ *                            DOCUMENTATION
+ ****************************************************************************************/
+
+ Purpose:
+   To synchronize contents of a folder from one system to another
+
+ Source Code and components:
+   MySyncServer : Server that runs on a particular port number and has the required folders requested by client and responds to client requests for a folder by transferring the folder and its contents.
+  
+   MySyncClient:  Client that requests contents of a folder from the server located at a specific IP address and serving on a port number
+
+  How to run:
+   Place MySyncServer.c code in a folder on a computer and compile it using the below command:
+    
+      cc MySyncServer.c -o MySyncServer.o
+
+   Now run this server by specifying the port number using below command:
+   
+     ./MySyncServer.o 5000
+
+   Place MySyncClient.c code in a folder on a computer and compile it using the below command:
+    
+      cc MySyncClient.c -o MySyncClient.o
+   
+   Now run this server by specifying the port number using below command:
+
+     ./MySyncServer.o <foldername> <portnumber>
+     Ex : ./MySyncServer.o docs 5000
+
+(PS: beacuse i was using a single computer i specified the IP address with in the code )
+   
